@@ -140,3 +140,19 @@ JOIN animals ON owners.id = animals.owner_id
 GROUP BY owners.full_name
 ORDER BY num_of_animals DESC
 LIMIT 1;
+
+-- last animal seen by Vet William Tatcher
+
+SELECT a.name AS animal_name
+FROM visits v
+JOIN animals a ON v.animal_id = a.id
+JOIN vets t ON v.vet_id = t.id
+WHERE t.name = 'Vet William Tatcher'
+ORDER BY v.visit_date DESC
+LIMIT 1;
+
+-- number of animals seen by Stephanie Mendez:
+SELECT COUNT(DISTINCT v.animal_id) AS num_animals_seen
+FROM visits v
+JOIN vets t ON v.vet_id = t.id
+WHERE t.name = 'Vet Stephanie Mendez';
