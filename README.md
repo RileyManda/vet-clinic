@@ -1,4 +1,4 @@
-# vet db
+# vet clinic
 
 > Vet clinic database schema and queries
 
@@ -11,29 +11,6 @@ This repository includes files with plain SQL that contains the vet database sch
 
 <a name="readme-top"></a>
 
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
-
-Modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-After you're finished please remove all the comments and instructions!
--->
-
-
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -42,7 +19,7 @@ After you're finished please remove all the comments and instructions!
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
+  <!-- - [🚀 Live Demo](#live-demo) -->
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -60,31 +37,31 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [Vet clinic] <a name="about-project"></a>
 
 > Vet clinic database schema and queries
 
-**[Vet db]** is a repository that contains sql Vet clinic database schema and queries.
+**[Vet clinic]** is a repository that contains sql Vet clinic database schema and queries.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
+> SQL commands where executed on the terminal via posgresSql.
 
-<details>
+<!-- <details>
   <summary>Client</summary>
   <ul>
     <li><a href="https://reactjs.org/">React.js</a></li>
   </ul>
-</details>
+</details> -->
 
-<details>
+<!-- <details>
   <summary>Server</summary>
   <ul>
     <li><a href="https://expressjs.com/">Express.js</a></li>
   </ul>
-</details>
+</details> -->
 
 <details>
 <summary>Database</summary>
@@ -93,26 +70,30 @@ After you're finished please remove all the comments and instructions!
   </ul>
 </details>
 
+<details>
+<summary>Language</summary>
+  <ul>
+    <li><a href="https://www.mysql.com/">MySQL</a></li>
+  </ul>
+</details>
+
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
 - **[AnimalsTable]**
 - **[Add Animals]**
-- **[Remove Animals]**
 - **[Query Animals]**
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- LIVE DEMO -->
-
+<!-- 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 > Add a link to your deployed project.
 
-- [Live Demo Link](<replace-with-your-deployment-URL>)
+- [Live Demo Link](<replace-with-your-deployment-URL>) -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -141,7 +122,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone  https://github.com/RileyManda/vet-db.git
+  git clone  https://github.com/RileyManda/vet-clinic.git
 ```
 -
 
@@ -166,7 +147,7 @@ To run the project, you will need:
 postgresSql
 
 ```sh
-  psql
+  psql postgres
 ```
 
 
@@ -200,8 +181,6 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
-
 👤 **RileyManda**
 
 - GitHub: [@RileyManda](https://github.com/RileyManda)
@@ -215,7 +194,6 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
 
 - [ ] **[Intergrate db to front end]**
 
@@ -271,8 +249,8 @@ I would like to express my sincere gratitude to [Microverse](https://github.com/
 
 <!-- ATTRIBUTION -->
 
-## 👥 Attribution <a name="attribution"></a>
-- ProjectIcon: [Svgrepo](https://www.svgrepo.com/)
+<!-- ## 👥 Attribution <a name="attribution"></a>
+- ProjectIcon: [Svgrepo](https://www.svgrepo.com/) -->
 
 <!-- LICENSE -->
 
