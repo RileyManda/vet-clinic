@@ -15,14 +15,13 @@ SELECT * FROM animals WHERE weight_kg >= 10.4 AND weight_kg <= 17.3;
 BEGIN;
 UPDATE animals SET species = 'unspecified';
 /*roll back changes to species column.*/
-ROLLBACK
+ROLLBACK;
 
 /*Update the animals table by setting the species column to digimon.*/
 BEGIN;
 UPDATE animals
 SET species = 'digimon'
 WHERE name LIKE '%mon';
-
 COMMIT;
 
 /*Set the species column to pokemon for all animals that don't have species already set.*/
@@ -31,6 +30,10 @@ BEGIN;
 UPDATE animals
 SET species = 'pokemon'
 WHERE species IS NULL;
-
 COMMIT;
 
+/* delete all records in the animals table, then roll back the transaction.*/
+BEGIN;
+DELETE FROM animals;
+
+ROLLBACK;
