@@ -111,4 +111,32 @@ FROM owners
 LEFT JOIN animals ON owners.id = animals.owner_id
 ORDER BY owners.full_name, animals.name;
 
+-- number of animals per sp[ecies:
+SELECT species.name AS species_name, COUNT(*) AS animal_count
+FROM animals
+JOIN species ON animals.species_id = species.id
+GROUP BY species.name;
 
+-- list of animals owned by Jennifer Orwell
+
+SELECT animals.name AS digimon_name
+FROM animals
+JOIN species ON animals.species_id = species.id
+JOIN owners ON animals.owner_id = owners.id
+WHERE species.name = 'Digimon' AND owners.full_name = 'Jennifer Orwell';
+
+-- list of animals owned by Dean Winchester that havent tried to escape.
+
+SELECT animals.name AS animal_name
+FROM animals
+JOIN owners ON animals.owner_id = owners.id
+WHERE owners.full_name = 'Dean Winchester';
+
+-- most number of animals owned by a single owner
+
+SELECT owners.full_name, COUNT(animals.id) AS num_of_animals
+FROM owners
+JOIN animals ON owners.id = animals.owner_id
+GROUP BY owners.full_name
+ORDER BY num_of_animals DESC
+LIMIT 1;
