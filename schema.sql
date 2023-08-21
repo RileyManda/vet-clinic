@@ -35,5 +35,5 @@ ADD COLUMN species_id integer REFERENCES species(id);
 
 -- add column  species_id  in animal table
 ALTER TABLE animals
-ADD COLUMN species_id integer REFERENCES species(id);
+ADD COLUMN owner_id integer REFERENCES owners(id);
 
