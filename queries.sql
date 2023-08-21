@@ -90,5 +90,5 @@ GROUP BY species;
 --Average number of escape attempts per animal type-born between 1990 and 2000?
 SELECT species, AVG(escape_attempts) AS avg_escape_attempts
 FROM animals
-WHERE date_of_birth BETWEEN '1990-01-01' AND '2000-12-31'
+WHERE date_of_birth BETWEEN '1989-12-31' AND '2000-12-30' 
 GROUP BY species;
