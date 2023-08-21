@@ -24,4 +24,16 @@ CREATE TABLE species (
     name varchar(255)
 );
 
+-- remove species column in animal table
+
+ALTER TABLE animals
+DROP COLUMN species;
+
+-- add column  species_id  in animal table
+ALTER TABLE animals
+ADD COLUMN species_id integer REFERENCES species(id);
+
+-- add column  species_id  in animal table
+ALTER TABLE animals
+ADD COLUMN species_id integer REFERENCES species(id);
 
