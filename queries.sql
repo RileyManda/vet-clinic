@@ -92,3 +92,10 @@ SELECT species, AVG(escape_attempts) AS avg_escape_attempts
 FROM animals
 WHERE date_of_birth BETWEEN '1989-12-31' AND '2000-12-30' 
 GROUP BY species;
+
+-- Melody ponds animals
+
+SELECT animals.name
+FROM animals
+JOIN owners ON animals.owner_id = owners.id
+WHERE owners.full_name = 'Melody Pond';
