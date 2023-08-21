@@ -9,3 +9,28 @@ SELECT name, escape_attempts FROM animals WHERE weight_kg > 10.5;
 SELECT * FROM animals WHERE neutered = true;
 SELECT * FROM animals WHERE name <> 'Gabumon';
 SELECT * FROM animals WHERE weight_kg >= 10.4 AND weight_kg <= 17.3;
+
+/*Transactions.*/
+/*update the animals table by setting the species column to unspecified*/
+BEGIN;
+UPDATE animals SET species = 'unspecified';
+/*roll back changes to species column.*/
+ROLLBACK
+
+/*Update the animals table by setting the species column to digimon.*/
+BEGIN;
+UPDATE animals
+SET species = 'digimon'
+WHERE name LIKE '%mon';
+
+COMMIT;
+
+/*Set the species column to pokemon for all animals that don't have species already set.*/
+BEGIN;
+
+UPDATE animals
+SET species = 'pokemon'
+WHERE species IS NULL;
+
+COMMIT;
+
