@@ -39,6 +39,15 @@ CREATE TABLE specializations (
     PRIMARY KEY (vet_id, species_id)
 );
 
+-- create table visits
+CREATE TABLE visits (
+    animal_id integer REFERENCES animals(id),
+    vet_id integer REFERENCES vets(id),
+    visit_date date,
+    PRIMARY KEY (animal_id, vet_id, visit_date)
+);
+
+
 -- remove species column in animal table
 
 ALTER TABLE animals
