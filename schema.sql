@@ -24,6 +24,21 @@ CREATE TABLE species (
     name varchar(255)
 );
 
+-- create table vets
+CREATE TABLE vets (
+    id serial PRIMARY KEY,
+    name varchar(255),
+    age integer,
+    date_of_graduation date
+);
+
+-- create table specializations
+CREATE TABLE specializations (
+    vet_id integer REFERENCES vets(id),
+    species_id integer REFERENCES species(id),
+    PRIMARY KEY (vet_id, species_id)
+);
+
 -- remove species column in animal table
 
 ALTER TABLE animals
