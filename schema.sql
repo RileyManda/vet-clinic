@@ -33,7 +33,20 @@ DROP COLUMN species;
 ALTER TABLE animals
 ADD COLUMN species_id integer REFERENCES species(id);
 
--- add column  species_id  in animal table
+-- add column  owner_id  in animal table
 ALTER TABLE animals
 ADD COLUMN owner_id integer REFERENCES owners(id);
 
+-- insert data- owners table
+INSERT INTO owners (full_name, age)
+VALUES ('Sam Smith', 34);
+INSERT INTO owners (full_name, age)
+VALUES ('Jennifer Orwell', 19);
+INSERT INTO owners (full_name, age)
+VALUES ('Bob', 45);
+INSERT INTO owners (full_name, age)
+VALUES ('Melody Pond', 77);
+INSERT INTO owners (full_name, age)
+VALUES ('Dean Winchester', 14);
+INSERT INTO owners (full_name, age)
+VALUES ('Jodie Whittaker', 38);
