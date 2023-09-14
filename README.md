@@ -1,4 +1,9 @@
-# vet clinic
+<div align="center">
+ <img src="app-logo.png" alt="logo" width="140"  height="auto" />
+  <br/>
+  <h1><b>Vet Clinic</b></h1>
+
+</div>
 
 > Vet clinic database schema and queries
 
